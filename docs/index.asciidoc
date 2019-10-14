@@ -105,18 +105,18 @@ The JMS plugin can also be configured using JNDI if desired.
         destination => "myqueue"
         pub_sub => false
         # JNDI Settings
-        jndi_name => /jms/cf/default <2>
+        jndi_name => '/jms/cf/default' <2>
         jndi_context => { <3>
-         'java.naming.factory.initial' => com.solacesystems.jndi.SolJNDIInitialContextFactory
-         'java.naming.security.principal' => solace-cloud-client@user
-         'java.naming.provider.url' => tcp://address.messaging.solace.cloud:20608
-         'java.naming.security.credentials' => verysecret
+         'java.naming.factory.initial' => 'com.solacesystems.jndi.SolJNDIInitialContextFactory'
+         'java.naming.security.principal' => 'solace-cloud-client@user'
+         'java.naming.provider.url' => 'tcp://address.messaging.solace.cloud:20608'
+         'java.naming.security.credentials' => 'verysecret'
         }
         # Jar files to be imported
         require_jars=> ['/usr/share/jms/commons-lang-2.6.jar', <4>
                         '/usr/share/jms/sol-jms-10.5.0.jar',
                         '/usr/share/jms/geronimo-jms_1.1_spec-1.1.1.jar',
-                        '/usr/share/jms/commons-lang-2.6.jar]'
+                        '/usr/share/jms/commons-lang-2.6.jar']
     }
  }
 --------------------------------------------------
